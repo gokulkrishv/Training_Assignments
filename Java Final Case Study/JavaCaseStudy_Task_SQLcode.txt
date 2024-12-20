@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS capgemini;
+USE capgemini;
+
+CREATE TABLE players (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    skill VARCHAR(50),
+    exp INT,
+    country VARCHAR(50),
+    overall_score DOUBLE
+);
+
+-- whenever a error is occured, values get duplicated so output is not proper, so when this scenario occurs if I use truncate & run again means it wont show duplicate values
+TRUNCATE TABLE players; 
+select * from players;
